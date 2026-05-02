@@ -1,0 +1,14 @@
+/* First lines of every stylesheet */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Inter, Helvetica, sans-serif;
+    margin: 0;
+
+
+}
+
