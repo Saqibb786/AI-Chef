@@ -1,6 +1,7 @@
 import React from 'react'
 
 function IngredientsList(props) {
+
         const ingredientsListItems = props.ingredientsList.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ))

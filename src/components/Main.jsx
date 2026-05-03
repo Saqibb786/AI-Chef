@@ -4,14 +4,14 @@ import IngredientsList from './IngredientsList'
 import { getRecipeFromMistral, getRecipeFromGroq } from '../../ai'
 
 function Main() {    
-    const [ingredientsList, setIngredientsList] = React.useState(["all the main spices", "water", "milk", "floor"])
+    const [ingredientsList, setIngredientsList] = React.useState([])
     const [recipe, setRecipe] = useState("")
 
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         
-        !newIngredient && setIngredientsList(prevIngredients => [...prevIngredients, newIngredient])
+        setIngredientsList(prevIngredients => [...prevIngredients, newIngredient])
         
     }
 
