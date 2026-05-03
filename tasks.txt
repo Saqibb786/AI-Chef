@@ -36,6 +36,10 @@
      * ingredient to our list!
      */
 ========= TASK 4 =========
+/**
+     * Challenge: use form action instead of onSubmit to
+     * handle the data from the form
+     */
 ========= TASK 5 =========
 ========= TASK 6 =========
 ========= TASK 7 =========
