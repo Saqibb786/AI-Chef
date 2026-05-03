@@ -1,14 +1,30 @@
-/* First lines of every stylesheet */
-
-*, *::before, *::after {
+* {
     box-sizing: border-box;
-    
 }
 
 body {
-    font-family: Inter, Helvetica, sans-serif;
     margin: 0;
-
-
+    font-family: Inter, sans-serif;
 }
 
+/**
+header box shadow code:
+*/
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+.header-logo {
+    width: 50px;
+}
+
+.header-title {
+    font-weight: 400;
+}
