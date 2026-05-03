@@ -1,4 +1,5 @@
 import React from 'react'
+import ContextText from './ContextText'
 
 function IngredientsList(props) {
 
@@ -8,9 +9,10 @@ function IngredientsList(props) {
     
   return (
             <section>
-                <h2>Ingredients on hand:</h2>
+                <h2 className='ingredients-title'>Ingredients on hand:</h2>
                 <ul className="ingredients-list"
                 aria-live="polite">{ingredientsListItems}</ul>
+                {props.context.length > 0 && <ContextText context={props.context} />}
                 {props.ingredientsList.length > 3 && <div className="get-recipe-container">
                     <div>
                         <h3>Ready for a recipe?</h3>

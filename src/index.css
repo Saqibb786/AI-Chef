@@ -41,6 +41,7 @@ main {
     justify-content: center;
     gap: 12px;
     height: 38px;
+    margin-bottom: 1.2rem;
 }
 
 .add-ingredient-form > input {
@@ -51,6 +52,7 @@ main {
     flex-grow: 1;
     min-width: 150px;
     max-width: 400px;
+
 }
 
 .add-ingredient-form > button {
@@ -73,12 +75,36 @@ main {
 /* -------------------------- */
 
 ul.ingredients-list {
-    margin-bottom: 48px;
+    margin-block: .6rem;
 }
 
 ul.ingredients-list > li {
     color: #475467;
     line-height: 28px;
+
+}
+.ingredients-title {
+    margin: 0;
+}
+
+.context-text {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    border-bottom: 2px solid #D17557;
+    margin-bottom: 1.2rem;
+
+}
+
+.context-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.context-text p {
+    margin: 0;
+    color: #334155;
+    line-height: 1.75;
 }
 
 .get-recipe-container {

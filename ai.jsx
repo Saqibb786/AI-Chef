@@ -15,7 +15,7 @@ const client = new OpenAI({
   dangerouslyAllowBrowser: true,
 });
 
-export async function getRecipeFromGroq(ingredientsArr) {
+export async function getRecipeFromGroq(ingredientsArr, context) {
   const ingredientsString = ingredientsArr.join(", ");
   try {
     const response = await client.chat.completions.create({
@@ -24,7 +24,10 @@ export async function getRecipeFromGroq(ingredientsArr) {
         { role: "system", content: SYSTEM_PROMPT },
         {
           role: "user",
-          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
+          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!
+          CONTEXT:
+          ${context}
+          `,
         },
       ],
       max_tokens: 1024,
