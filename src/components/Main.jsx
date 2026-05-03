@@ -9,7 +9,7 @@ function Main() {
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         
-        setIngredientsList(prevIngredients => [...prevIngredients, newIngredient])
+        !newIngredient && setIngredientsList(prevIngredients => [...prevIngredients, newIngredient])
         
     }
 
@@ -26,7 +26,7 @@ function Main() {
                 <button>Add ingredient</button>
             </form>
 
-            {ingredientsList.length > 0 ? 
+            {ingredientsList.length > 3 && 
                 <section>
                 <h2>Ingredients on hand:</h2>
                 <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
@@ -37,7 +37,7 @@ function Main() {
                     </div>
                     <button>Get a recipe</button>
                 </div>
-            </section> : null}
+            </section>}
         </main>
   )
 }

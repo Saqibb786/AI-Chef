@@ -44,7 +44,7 @@
     /**
      * Challenge:
      * Using conditional rendering, only render the new <section> IF
-     * there are ingredients added to the list of ingredients.
+     * there are more than 3 ingredients added to the list of ingredients.
      */
 ========= TASK 6 =========
 ========= TASK 7 =========
