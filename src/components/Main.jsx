@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AiRecipe from './AiRecipe'
 import IngredientsList from './IngredientsList'
-import { getRecipeFromMistral } from '../../ai'
+import { getRecipeFromMistral, getRecipeFromGroq } from '../../ai'
 
 function Main() {    
     const [ingredientsList, setIngredientsList] = React.useState(["all the main spices", "water", "milk", "floor"])
@@ -16,7 +16,8 @@ function Main() {
     }
 
     async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromMistral(ingredientsList)
+        // const recipeMarkdown = await getRecipeFromMistral(ingredientsList)
+        const recipeMarkdown = await getRecipeFromGroq(ingredientsList)
         console.log(recipeMarkdown)
         setRecipe((recipeMarkdown))
     }
