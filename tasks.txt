@@ -41,6 +41,11 @@
      * handle the data from the form
      */
 ========= TASK 5 =========
+    /**
+     * Challenge:
+     * Using conditional rendering, only render the new <section> IF
+     * there are ingredients added to the list of ingredients.
+     */
 ========= TASK 6 =========
 ========= TASK 7 =========
 ========= TASK 8 =========
