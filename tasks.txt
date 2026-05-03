@@ -30,6 +30,11 @@
      */
 
 ========= TASK 3 =========
+    /**
+     * Challenge: Update our app so that when the user enters a
+     * new ingredient and submits the form, it adds that new
+     * ingredient to our list!
+     */
 ========= TASK 4 =========
 ========= TASK 5 =========
 ========= TASK 6 =========
