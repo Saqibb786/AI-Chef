@@ -47,6 +47,18 @@
      * there are more than 3 ingredients added to the list of ingredients.
      */
 ========= TASK 6 =========
+    /**
+     * Challenge:
+     * 1. Create a boolean state that, for now, will represent whether
+     *    we've gotten a recipe back from the "chef". Default to `false`.
+     *    Can call it `recipeShown`.
+     * 2. Grab the markup in recipeCode.md and paste it below. This will
+     *    be a placeholder for the content that will come back from the 
+     *    chef once we set up that feature.
+     * 3. When the user clicks the "Get a recipe" button, flip the
+     *    `recipeShown` state to true.
+     * 4. Only display the recipe code content if `recipeShown` is true.
+     */
 ========= TASK 7 =========
 ========= TASK 8 =========
 ========= TASK 9 =========
