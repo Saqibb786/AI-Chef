@@ -9,6 +9,14 @@ function Main() {
     const [context, setContext] = React.useState("")
     const [recipe, setRecipe] = useState("")
 
+    const recipeSection = React.useRef(null)
+
+    React.useEffect(() => {
+        if(recipe !== "" & recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView()
+        }
+    }, [recipe])
+
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
@@ -53,6 +61,7 @@ function Main() {
 
             {ingredientsList.length > 0 && 
                 <IngredientsList 
+                ref={recipeSection}
                 ingredientsList={ingredientsList}
                 context={context}
                 getRecipe={getRecipe} />
