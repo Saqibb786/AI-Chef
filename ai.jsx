@@ -9,11 +9,11 @@ Format your response in markdown to make it easier to render to a web page
 `;
 
 // Using Groq Model
-const client = new OpenAI({
-  apiKey: import.meta.env.VITE_GROQ_API_KEY,
-  baseURL: "https://api.groq.com/openai/v1",
-  dangerouslyAllowBrowser: true,
-});
+// const client = new OpenAI({
+//   apiKey: import.meta.env.VITE_GROQ_API_KEY,
+//   baseURL: "https://api.groq.com/openai/v1",
+//   dangerouslyAllowBrowser: true,
+// });
 
 export async function getRecipeFromGroq(ingredientsArr, context) {
   const ingredientsString = ingredientsArr.join(", ");
@@ -41,7 +41,7 @@ export async function getRecipeFromGroq(ingredientsArr, context) {
 // Using Hugging Face Model
 const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
 
-export async function getRecipeFromMistral(ingredientsArr) {
+export async function getRecipeFromMistral(ingredientsArr, context) {
   const ingredientsString = ingredientsArr.join(", ");
   try {
     const response = await hf.chatCompletion({
@@ -50,7 +50,10 @@ export async function getRecipeFromMistral(ingredientsArr) {
         { role: "system", content: SYSTEM_PROMPT },
         {
           role: "user",
-          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
+          content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!
+          CONTEXT:
+          ${context}
+          `,
         },
       ],
       options: { wait_for_model: true },

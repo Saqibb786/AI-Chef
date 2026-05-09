@@ -39,8 +39,8 @@ function Main() {
     }
 
     async function getRecipe() {
-        // const recipeMarkdown = await getRecipeFromMistral(ingredientsList)
-        const recipeMarkdown = await getRecipeFromGroq(ingredientsList, context)
+        const recipeMarkdown = await getRecipeFromMistral(ingredientsList, context)
+        // const recipeMarkdown = await getRecipeFromGroq(ingredientsList, context)
         setRecipe((recipeMarkdown))
     }
 
